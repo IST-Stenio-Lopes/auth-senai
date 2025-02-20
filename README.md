@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🚫 Autenticação SENAI
 
-## Getting Started
+### Especificação
+- Projeto para padronização de autenticação de projetos, utilizando-o como base para trabalhos futuros. Alguns pontos serão necessários para a solução final, no tópico abaixo, estarão todos os pontos necessários.
 
-First, run the development server:
+### 📌 Estrutura do Backend
+- O backend já vai configurado, para efetuar o envio do token e se comunicar com o NextAuth da aplicação Next.
+ 
+### ✅ Critérios de Aceite
+#### [1.0.0] Role Admin
+Exibir um Navbar com as seguintes rotas:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🏠 Home
+- No main da página [Home], renderizar `Olá, ${nomedoUsuário}! (:role:)`
+- `Exemplo:` "Olá, João! (Admin)"
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+👥 Usuários
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+⚙️ Configuração
 
-## Learn More
+📤 Log out
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+*Para a role Admin, será necessário criar refresh token. Ou seja, o admin deverá ficar com acesso sem tempo de expiração, utilizando refresh token.*
 
-## Deploy on Vercel
+#### [1.1.0] Role User
+Exibir um Navbar com as seguintes rotas:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🏠 Home
+- No main da página [Home], renderizar `Olá, ${nomedoUsuário}! (:role:)`
+- `Exemplo:` "Olá, João! (User)"
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⚙️ Configuração
+
+📤 Log out
+
+
+
+*Para a role User, será necessário criar access token. Ou seja, o user deverá ficar com acesso até no máximo 1min, seguido de um aviso e após o aviso um timeout.*
+
+
+#### [2.0.0] Providers
+- Será necessário, as alternativas de login com Google, Github e Facebook.
+
+📜 Licença
+
+Este projeto é de uso interno e segue as diretrizes do SENAI.
+
+👨‍💻 Desenvolvido por Equipe SENAI
